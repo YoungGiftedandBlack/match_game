@@ -2,11 +2,18 @@
 <html>
 <head>
   <title>Match Game</title>
+  <link rel="stylesheet" type="text/css" href="./resources/css/reset.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="./resources/css/index.css">
   <link rel="shortcut icon" href="./resources/images/favicon.png">
+  <!-- You could have transitions similar to :<https://www.awwwards.com/inspiration/5a256d7ee1382366b93c6aab> or maybe have like a checkerboard cutout of
+each page...and have it pop in diagonally from top left to bottom right with slight delays so it looks like its fading in? It would be best to use
+the PNG format to create the transparency among the elements.
+Check out designdrizzle.com for amazing CSS transitions
+Use ".flip" jquery to create the card animations
+-->
 </head>
 <body>
   <div class="container">
@@ -22,53 +29,149 @@
       <div id="game" class="col-md-9">
         <!-- The Game -->
         <div class="row">
-          <div class="col-md-3 card_back">
-            <span></span>
+          <div class="col-md-3 card">
+            <div class="front">
+
+            </div>
+            <div class="back unmatched_card">
+              <span></span>
+
+            </div>
           </div>
           <div class="col-md-3 card">
-            <span></span>
+            <div class="front">
+
+            </div>
+            <div class="back unmatched_card">
+              <span>1</span>
+
+            </div>
           </div>
           <div class="col-md-3 card">
-            <span></span>
+            <div class="front">
+
+            </div>
+            <div class="back unmatched_card">
+              <span></span>
+
+            </div>
           </div>
           <div class="col-md-3 card">
-            <span></span>
+            <div class="front">
+
+            </div>
+            <div class="back unmatched_card">
+              <span></span>
+
+            </div>
           </div>
           <div class="col-md-3 card">
-            <span></span>
+            <div class="front">
+
+            </div>
+            <div class="back unmatched_card">
+              <span></span>
+
+            </div>
           </div>
           <div class="col-md-3 card">
-            <span></span>
+            <div class="front">
+
+            </div>
+            <div class="back unmatched_card">
+              <span></span>
+
+            </div>
           </div>
           <div class="col-md-3 card">
-            <span></span>
+            <div class="front">
+
+            </div>
+            <div class="back unmatched_card">
+              <span></span>
+
+            </div>
           </div>
           <div class="col-md-3 card">
-            <span></span>
+            <div class="front">
+
+            </div>
+            <div class="back unmatched_card">
+              <span></span>
+
+            </div>
           </div>
           <div class="col-md-3 card">
-            <span></span>
+            <div class="front">
+
+            </div>
+            <div class="back unmatched_card">
+              <span></span>
+
+            </div>
           </div>
           <div class="col-md-3 card">
-            <span></span>
+            <div class="front">
+
+            </div>
+            <div class="back unmatched_card">
+              <span></span>
+
+            </div>
           </div>
           <div class="col-md-3 card">
-            <span></span>
+            <div class="front">
+
+            </div>
+            <div class="back unmatched_card">
+              <span></span>
+
+            </div>
           </div>
           <div class="col-md-3 card">
-            <span></span>
+            <div class="front">
+
+            </div>
+            <div class="back unmatched_card">
+              <span></span>
+
+            </div>
           </div>
           <div class="col-md-3 card">
-            <span></span>
+            <div class="front">
+
+            </div>
+            <div class="back unmatched_card">
+              <span></span>
+
+            </div>
           </div>
           <div class="col-md-3 card">
-            <span></span>
+            <div class="front">
+
+            </div>
+            <div class="back unmatched_card">
+              <span></span>
+
+            </div>
           </div>
           <div class="col-md-3 card">
-            <span></span>
+            <div class="front">
+
+            </div>
+            <div class="back unmatched_card">
+              <span></span>
+
+            </div>
           </div>
           <div class="col-md-3 card">
-            <span></span>
+            <div class="front">
+
+            </div>
+            <div class="back unmatched_card">
+              <span></span>
+
+            </div>
           </div>
 
         </div>
@@ -79,6 +182,7 @@
     src="https://code.jquery.com/jquery-3.1.1.min.js"
     integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
     crossorigin="anonymous"></script>
+  <script src="https://cdn.rawgit.com/nnattawat/flip/v1.0.16/dist/jquery.flip.min.js"></script>
   <script type="text/javascript" src="./resources/js/match-game.js"></script>
   <script type="text/javascript" src="./resources/js/tests.js"></script>
 </body>

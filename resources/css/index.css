@@ -16,7 +16,7 @@
 
 html {
   font-size: 14px;
-  font-family: "work-sans", sans-serif;
+  font-family: "Work Sans", sans-serif;
   background-color: rgb(255, 242, 242);
 }
 
@@ -48,11 +48,15 @@ body {
 
 #game {}
 
+#game .col-md-3 {
+  padding: 0px;
+}
+
 .card {
-  background-color: rgb(32, 64, 86);
   border: 4px solid #ffffff;
   border-radius: 8px;
   height: 12.5rem;
+  position: relative;
 }
 
 .card span {
@@ -61,18 +65,29 @@ body {
   color: rgb(255, 255, 255);
 }
 
-.card_back {
+.back {
+  z-index: 0;
+  position: absolute;
+}
+
+.front {
   background-image: url("../../resources/images/card_game_back.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  height: 12.5rem;
+  height: 100%;
+  width: 100%;
   border-radius: 8px;
-  border: 4px solid rgb(255, 255, 255);
+  z-index: 2;
+  position: absolute;
 }
 
 .matched_card {
   background-color: rgba(153, 153, 153, 0.25);
+}
+
+.unmatched_card {
+  background-color: rgb(255, 209, 181);
 }
 
 .card_1 {

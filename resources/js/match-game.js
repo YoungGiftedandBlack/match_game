@@ -30,3 +30,7 @@ MatchGame.renderCards = function(cardValues, $game) {
 MatchGame.flipCard = function($card, $game) {
 
 };
+
+$(document).ready(function(){
+  $(".card").flip();
+  });
