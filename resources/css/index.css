@@ -53,21 +53,28 @@ body {
 }
 
 .card {
-  border: 4px solid #ffffff;
-  border-radius: 8px;
   height: 12.5rem;
   position: relative;
 }
 
+.card {
+  cursor: pointer;
+}
+
 .card span {
   font-weight: 900;
-  font-size: 7rem;
+  font-size: 1rem;
   color: rgb(255, 255, 255);
 }
 
 .back {
   z-index: 0;
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 4px solid #ffffff;
+  border-radius: 8px;
 }
 
 .front {
@@ -77,6 +84,7 @@ body {
   background-position: 50% 50%;
   height: 100%;
   width: 100%;
+  border: 4px solid #ffffff;
   border-radius: 8px;
   z-index: 2;
   position: absolute;

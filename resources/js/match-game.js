@@ -34,3 +34,31 @@ MatchGame.flipCard = function($card, $game) {
 $(document).ready(function(){
   $(".card").flip();
   });
+
+/*  var numberArray1 = [];
+  for (i = 0; i <= 8; i++){
+    numberArray1.push(i);
+  }
+
+  var numberArray2 = [];
+  for (i = 0; i <= 8; i++){
+    numberArray2.push(i);
+  } */
+
+
+var list_1 = [];
+
+for (i = 1; i <= 8; i++){
+  list_1.push(i);
+}
+
+for (i = 1; i <= 8; i++){
+  list_1.push(i);
+}
+
+var rand = list_1[Math.floor(Math.random() * list_1.length)];
+var rand_1
+$("#game .row:nth-child(0n+1)").find("span").html(rand);
+/*if($("#game .row").hasclass(".back")) {
+  $(this).html(rand);
+}*/
