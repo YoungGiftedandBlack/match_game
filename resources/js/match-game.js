@@ -124,3 +124,27 @@ $(document).ready(function(){
   list_1.splice(index_16, 1);
 
 });
+
+$(document).ready(function(){
+  $("#game .card .back").click(function() {
+    if ($(this).css("z-index") == "1") {
+      /*alert("The #" + $(this).children("span").text() + " card is facing up");*/
+    }
+  });
+});
+
+/* This function pushes the value of the card to face_up_cards variable as long as the number of face_up_cards <= 2 after, if face_up_cards = 3
+it should remove the 0 & 1 indexed values. Then check for whether the values in the array match? */
+$(document).ready(function(){
+  var face_up_cards = [];
+  $("#game .card .front").click(function(){
+    if (face_up_cards.length <= 1) {
+      face_up_cards.push($(this).siblings(".back").children("span").text());
+      document.getElementById("demo").innerHTML = face_up_cards;
+      alert(face_up_cards.length);
+    }
+    if (face_up_cards.length > 1) {
+      face_up_cards.splice(0, 2);
+    }
+  });
+});
