@@ -24,6 +24,7 @@ html h1 {
   font-weight: bold;
   font-size: 2.5rem;
   color: rgb(32, 64, 86);
+  background-color: ;
 }
 
 html h2 {
@@ -97,6 +98,7 @@ body {
 .unmatched_card {
   background-color: rgb(255, 209, 181);
 }
+
 
 .card_1 {
   background-color: hsl(25, 85%, 65%);

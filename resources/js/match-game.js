@@ -31,9 +31,15 @@ MatchGame.flipCard = function($card, $game) {
 
 };
 
+/*$(document).ready(function(){
+  $(".card").flip();
+});*/
+
 $(document).ready(function(){
   $(".card").flip();
-  });
+});
+
+
 
 $(document).ready(function(){
   var list_1 = [];
@@ -138,13 +144,40 @@ it should remove the 0 & 1 indexed values. Then check for whether the values in 
 $(document).ready(function(){
   var face_up_cards = [];
   $("#game .card .front").click(function(){
+
+    /* these if functions check face up card values and change the background if the cards match */
     if (face_up_cards.length <= 1) {
       face_up_cards.push($(this).siblings(".back").children("span").text());
       document.getElementById("demo").innerHTML = face_up_cards;
-      alert(face_up_cards.length);
+      /* This function needs to remove the card's array value from the list_1 */
+
+
+      if (face_up_cards[0] == face_up_cards[1]) {
+
+        $(this).siblings(".back").removeClass("unmatched_card").addClass("matched_card");
+        $(this).parent().css("pointer-events", "none");
+
+        $(".back").filter(function() {
+          if ($(this).css("z-index") == "1") {
+            $(this).removeClass("unmatched_card").addClass("matched_card");
+            $(this).parent().css("pointer-events", "none");
+          }
+        });
+      }
+
+      if (face_up_cards.length == 2) {
+        if (face_up_cards[0] != face_up_cards[1]) {
+          setTimeout(function () {
+            $(".unmatched_card").parent().flip(false);
+          }, 750);
+      }
+
+      }
     }
     if (face_up_cards.length > 1) {
       face_up_cards.splice(0, 2);
     }
   });
 });
+
+/* this function removes the turned cards' value from the array so that it can't match with itself */
